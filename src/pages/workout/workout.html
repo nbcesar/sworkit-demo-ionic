@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start left>
+      <button ion-button clear color="dark" (click)="endWorkout()">
+        End
+      </button>
+    </ion-buttons>
+    <ion-title mode="ios">{{ displayTime }}</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+<ion-content no-padding class="no-scroll">
+
+  <ion-row justify-content-center>
+    <ion-col col-12 col-md-6 class="video-col">
+      <h2 text-center>{{ workoutData?.exercises[exerciseIndex].name }}</h2>
+      <video autoplay loop src="assets/videos/{{workoutData?.exercises[exerciseIndex].video}}" playsinline></video>
+      <!-- <img src="assets/videos/pushup.gif" /> -->
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-center>
+    <ion-col col-8 col-sm-6 class="wrapper">
+      <div class="circle">
+        <h1>{{ exerciseTime }}</h1>
+      </div>
+      <!-- <div class="circle"></div> -->
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+
+    <ion-row>
+      <ion-col col-4 text-center>
+        <button ion-button icon-only color="light" (click)="changeExercise('rewind')">
+          <ion-icon name="rewind"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-4 text-center>
+        <button ion-button icon-only color="light" (click)="playPause()">
+          <ion-icon *ngIf="play" name="pause"></ion-icon>
+          <ion-icon *ngIf="!play" name="play"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-4 text-center>
+        <button ion-button icon-only color="light" (click)="changeExercise('forward')">
+          <ion-icon name="fastforward"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+
+</ion-footer>

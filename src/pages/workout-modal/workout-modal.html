@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start left>
+      <button ion-button icon-only (click)="back()">
+        <ion-icon color="dark" name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title mode="ios">{{ workoutData.title }}</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon color="dark" name="musical-notes"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <p text-center>How many minutes?</p>
+  <ion-row justify-content-center>
+    <ion-col col-10 col-sm-6 class="wrapper">
+      <div class="circle">
+        <h1>{{ time }}</h1>
+        <p>MINUTES</p>
+      </div>
+      <!-- <div class="circle"></div> -->
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-center>
+    <ion-col col-10 col-sm-6 class="buttons-row">
+      <button ion-button icon-only round color="light" (click)="changeTime('down')" [disabled]="time == 5">
+        <ion-icon name="remove"></ion-icon>
+      </button>
+      <button ion-button icon-only round color="light" (click)="changeTime('up')" [disabled]="time == 60">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-center>
+    <ion-col col-12 text-center>
+      <button ion-button round color="dark" (click)="begin()">BEGIN WORKOUT</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

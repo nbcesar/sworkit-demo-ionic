@@ -1,0 +1,43 @@
+page-end-workout {
+  text-align: center;
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px !important;
+    ion-row {
+      //flex: 1;
+    }
+  }
+
+  .img-row {
+    height: 50vh;
+  }
+  .flame {
+    background-image: url('../assets/images/flames.png');
+    color: white;
+  }
+  .watch {
+    background-image: url('../assets/images/timer.png');
+    background-position: 0 45% !important;
+    color: orange;
+  }
+  .end-img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+    }
+    .small-text {
+      p {
+        margin: 0;
+      }
+    }
+
+  }
+}

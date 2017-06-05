@@ -1,0 +1,46 @@
+page-workout {
+  .no-scroll .scroll-content{
+    overflow: hidden;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  video {
+    height: 56.25%;
+    max-width: 100%;
+    width: 100%;
+    border: 2px solid white !important;
+    padding-top: 2px !important;
+    //margin-top: 25px;
+    //max-height: 40vh;
+  }
+  .video-col {
+    //max-height: 20vh;
+    //max-width: 100%;
+  }
+
+  .wrapper {
+    height: 25vh;
+    //border-radius: 50%;
+    //border: 10px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    text-align: center;
+    h1 {
+      font-size: 5em;
+      margin-bottom: 0;
+      margin-top: 0;
+      color: orange;
+    }
+  }
+}
+
+ion-footer {
+  .icon {
+    //font-size: 2em;
+  }
+}

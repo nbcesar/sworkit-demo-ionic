@@ -1,0 +1,33 @@
+page-workout-modal {
+
+  p {
+    margin-top: 0;
+  }
+
+  .wrapper {
+    height: 40vh;
+    border-radius: 50%;
+    border: 10px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    text-align: center;
+    h1 {
+      font-size: 5em;
+      margin-bottom: 0;
+      color: gray;
+    }
+    p {
+      color: orange;
+      font-size: 2em;
+    }
+  }
+
+  .buttons-row {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,38 @@
+<!--
+<ion-header>
+  <ion-row class="title" justify-content-center>
+    <h1>{{ workoutData.title }}</h1>
+  </ion-row>
+  <ion-row justify-content-center>
+    <button ion-button round small color="light" (click)="beginWorkout()">Select Workout</button>
+  </ion-row>
+</ion-header> -->
+
+<ion-header no-border>
+
+</ion-header>
+
+<ion-content no-padding fullscreen>
+
+  <div class="header-image" [ngStyle]="{'background-image': 'url(assets/images/'+workoutData.image+')'}">
+    <h1><ion-icon class="back" color="light" name="arrow-back" (click)="back()"></ion-icon></h1>
+    <h1>{{ workoutData.title }}</h1>
+    <button ion-button round small color="light" (click)="workoutOptions()">Select Workout</button>
+  </div>
+
+  <ion-grid fixed>
+    <ion-list no-lines>
+      <ion-item text-wrap>
+        <p [class.core]="core">{{ workoutData.description }}</p>
+      </ion-item>
+      <ion-item class="item-exercise" *ngFor="let workout of workoutData.exercises">
+        <!-- <ion-thumbnail item-left> -->
+          <img class="workout-img" item-left src="assets/images/exercises/{{ workout.image }}" />
+        <!-- </ion-thumbnail> -->
+        <h2 [class.core]="core" text-wrap>{{ workout.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+
+
+</ion-content>

@@ -14,24 +14,37 @@
 
 <ion-content no-padding fullscreen>
 
-  <div class="header-image" [ngStyle]="{'background-image': 'url(assets/images/'+workoutData.image+')'}">
-    <h1><ion-icon class="back" color="light" name="arrow-back" (click)="back()"></ion-icon></h1>
+  <div class="header-image" [class.core-header]="core" [ngStyle]="{'background-image': 'url(assets/images/'+workoutData.image+')'}">
+    <!-- <h1><ion-icon class="back" color="light" name="arrow-back" (click)="back()"></ion-icon></h1> -->
     <h1>{{ workoutData.title }}</h1>
-    <button ion-button round small color="light" (click)="workoutOptions()">Select Workout</button>
+    <!-- <ion-buttons>
+      <button ion-button icon-only small round color="danger" (click)="back()">
+        <ion-icon class="back" color="light" name="arrow-back" (click)="back()"></ion-icon>
+      </button>
+      <button ion-button round small color="light" (click)="workoutOptions()">Start Workout</button>
+    </ion-buttons> -->
+    <button ion-button round color="light" (click)="workoutOptions()">Start Workout</button>
   </div>
 
   <ion-grid fixed>
-    <ion-list no-lines>
-      <ion-item text-wrap>
-        <p [class.core]="core">{{ workoutData.description }}</p>
-      </ion-item>
-      <ion-item class="item-exercise" *ngFor="let workout of workoutData.exercises">
-        <!-- <ion-thumbnail item-left> -->
+    <p [class.core]="core">{{ workoutData.description }}</p>
+
+    <!-- <ion-list no-lines *ngIf="!core">
+      <div *ngFor="let workout of workoutData.exercises">
+        <h2 text-center [class.core]="core" text-wrap>{{ workout.name}}</h2>
+        <img class="workout-img" item-left src="assets/images/exercises/{{ workout.image }}" />
+      </div>
+    </ion-list> -->
+
+    <ion-row >
+      <ion-col col-12 col-sm-6 col-md-4 *ngFor="let workout of workoutData.exercises">
+        <ion-card>
+          <h2 [class.core]="core" text-wrap>{{ workout.name}}</h2>
           <img class="workout-img" item-left src="assets/images/exercises/{{ workout.image }}" />
-        <!-- </ion-thumbnail> -->
-        <h2 [class.core]="core" text-wrap>{{ workout.name}}</h2>
-      </ion-item>
-    </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
   </ion-grid>
 
 

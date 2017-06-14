@@ -42,16 +42,19 @@ page-workout-home {
       font-weight: bold;
       margin-top: 0;
     }
-    .back {
-      position: absolute;
-      left: 15px;
-      top: 5px;
-    }
-
+    // .back {
+    //   position: absolute;
+    //   left: 15px;
+    //   top: 5px;
+    // }
   }
 
+
+  .scroll-content {
+    background-color: #E0E0E0;
+  }
   .grid {
-    max-width: 960px !important;
+    //max-width: 960px !important;
   }
   .item {
     padding-left: 5px;
@@ -65,11 +68,12 @@ page-workout-home {
     color: black;
   }
   h2 {
-    font-size: 1em;
-    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold !important;
+    text-align: center;
   }
   .workout-img {
-    max-width: 45%;
+    //max-width: 45%;
   }
 
   p.core {
@@ -78,5 +82,8 @@ page-workout-home {
   h2.core {
     text-align: center;
     font-size: 2em;
+  }
+  .card {
+    border-radius: 2%;
   }
 }

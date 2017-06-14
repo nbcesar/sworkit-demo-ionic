@@ -17,17 +17,55 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="no-scroll">
 
-  <p text-center>How many minutes?</p>
-  <ion-row justify-content-center>
+  <p text-center id="title-minutes">How many minutes?</p>
+  <ion-row justify-content-center id="timer-row">
     <ion-col col-10 col-sm-6 class="wrapper">
-      <div class="circle">
-        <h1>{{ time }}</h1>
-        <p>MINUTES</p>
+      <div class="container">
+        <div class="circle outer-circle">
+          <div class="circle-text">
+            <h1>{{ time }}</h1>
+            <p>MINUTES</p>
+          </div>
+        </div>
+        <div class="qt top-right-qt">
+          <div
+            class="circle q1"
+            [ngStyle]="{
+              'transform': time > 10 ? 'rotate(-45deg)': time > 5 ? 'rotate(-75deg)': ''
+            }">
+          </div>
+        </div>
+        <div class="qt bottom-right-qt">
+          <div
+            class="circle q2"
+            [ngStyle]="{
+              'transform': time == 20 ? 'rotate(-105deg)': time == 25 ? 'rotate(-75deg)': time > 25 ? 'rotate(-45deg)': ''
+            }">
+          </div>
+        </div>
+        <div class="qt bottom-left-qt">
+          <div
+            class="circle q3"
+            [ngStyle]="{
+              'transform': time == 35 ? 'rotate(-105deg)': time == 40 ? 'rotate(-75deg)': time > 40 ? 'rotate(-45deg)': ''
+            }">
+          </div>
+        </div>
+        <div class="qt top-left-qt">
+          <div
+            class="circle q4"
+            [ngStyle]="{
+              'transform': time == 50 ? 'rotate(-105deg)': time == 55 ? 'rotate(-75deg)': time > 55 ? 'rotate(-45deg)': ''
+            }">
+          </div>
+        </div>
       </div>
-      <!-- <div class="circle"></div> -->
+
+
     </ion-col>
+
   </ion-row>
   <ion-row justify-content-center>
     <ion-col col-10 col-sm-6 class="buttons-row">

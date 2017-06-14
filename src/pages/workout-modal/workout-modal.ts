@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 import { WorkoutPage } from '../workout/workout';
@@ -22,6 +22,7 @@ export class WorkoutModalPage {
   }
 
   ionViewDidLoad() {
+
   }
 
   back() {

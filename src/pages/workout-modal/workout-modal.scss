@@ -1,33 +1,93 @@
 page-workout-modal {
 
+  .no-scroll .scroll-content{
+    overflow: hidden;
+  }
+
   p {
     margin-top: 0;
-  }
-
-  .wrapper {
-    height: 40vh;
-    border-radius: 50%;
-    border: 10px solid #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .circle {
-    text-align: center;
-    h1 {
-      font-size: 5em;
-      margin-bottom: 0;
-      color: gray;
-    }
-    p {
-      color: orange;
-      font-size: 2em;
-    }
   }
 
   .buttons-row {
     display: flex;
     justify-content: space-between;
+  }
+  #title-minutes {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  #timer-row {
+    height: 40vh;
+  }
+  .wrapper {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .outer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-text {
+    margin: 0;
+    text-align: center;
+    h1 {
+      font-size: 7em;
+      color: gray;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
+  .container {
+    position: relative;
+    height: 40vh;
+    width: 40vh;
+    //background-color: #f4f4f4;
+  }
+  .circle {
+    position: absolute;
+    border: 20px solid #f4f4f4;
+    height: 40vh;
+    width: 40vh;
+    border-radius: 50%;
+  }
+  .qt {
+    overflow: hidden;
+    position: absolute;
+    height: 50%; width: 50%;
+  }
+
+  .top-right-qt {
+    left: 50%;
+    transform: rotate(90deg);
+  }
+  .bottom-right-qt {
+    left: 50%; top: 50%;
+    transform: rotate(180deg);
+  }
+  .top-left-qt {
+  }
+  .bottom-left-qt {
+    top: 50%;
+    transform: rotate(-90deg);
+  }
+  .q1 {
+    border-top-color: orange;
+    transform: rotate(-105deg);
+  }
+  .q2 {
+    border-top-color: orange;
+    transform: rotate(-135deg);
+  }
+  .q3 {
+    border-top-color: orange;
+    transform: rotate(-135deg);
+  }
+  .q4 {
+    border-top-color: orange;
+    transform: rotate(-135deg);
   }
 }
